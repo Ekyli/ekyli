@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Dayton regular';
+    src: url('../fonts/dayton_regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Dayton regular';
+}
+
+#bar-scroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.5s;
+}
+
+#navigation-bar {
+    background-color: darkgreen;
+    color: #b6ffcb;        /*  inutile de mettre width: 100% (cf : élément block) */
+    display:grid;
+    grid-template-columns: 200px auto;
+}
+
+.logo {
+    grid-column: 1 / 2;
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.logo p {
+    color: black;
+    font-size: 40px;
+}
+
+.logo span {
+    color: #b6ffcb;
+    font-size: 28px;
+
+}
+
+.navigation-list {
+    list-style-type: none;
+    grid-column: 2 / 3;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navigation-item a {
+    text-decoration: none;
+    color: #b6ffcb;
+    /*border: 1px solid black;*/
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+.navigation-item a:hover {
+    background-color: #b6ffcb;
+    color: darkgreen;
+    transition: .5s;
+}
+
